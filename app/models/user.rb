@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
     if user
       return user
     else
-      binding.pry
       user = self.create(email: fb_email, uid: fb_uid)
     end
   end
