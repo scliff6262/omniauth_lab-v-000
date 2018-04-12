@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
       return user
     else
       user = self.create(email: fb_email, uid: fb_uid)
-      return user
     end
   end
 
