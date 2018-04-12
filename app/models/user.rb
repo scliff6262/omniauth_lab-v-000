@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   #has_secure_password
 
-  def self.find_or_create_by_fb_email(fb_email, fb_uid)
+  def self.find_or_create_by_fb_email(fb_name, fb_email, fb_uid)
     user = self.find_by(uid: fb_uid)
     if user
       return user
