@@ -3,7 +3,6 @@ require 'pry'
 class SessionsController < ApplicationController
 
   def create
-    binding.pry
     fb_name = request.env["omniauth.auth"]["info"]["name"]
     fb_email = request.env["omniauth.auth"]["info"]["email"]
     fb_uid = request.env["omniauth.auth"]["uid"]
